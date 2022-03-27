@@ -6,8 +6,8 @@ type Item = {
 }
 
 function App() {
-  const [search, setSearch] = useState("");
-  const [offset, setOffset] = useState(0);
+  const [search, setSearch] = useState<string>("");
+  const [offset, setOffset] = useState<number>(0);
   const { list, isLoading, isEnough } = useFetchData(offset, search);
 
   //Function that triggers fetch if the last element appears on the screen
