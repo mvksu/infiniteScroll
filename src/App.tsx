@@ -10,7 +10,7 @@ function App() {
   const [offset, setOffset] = useState<number>(0);
   const { list, isLoading, isEnough } = useFetchData(offset, search);
 
-  //Function that triggers fetch if the last element appears on the screen
+  //Logic that triggers fetch if the last element appears on the screen
 
   const observer = useRef<IntersectionObserver | null>(null);
   const lastCardRefElement = useCallback(
